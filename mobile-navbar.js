@@ -42,3 +42,11 @@ class MobileNavbar {
     ".nav-list li",
   );
   mobileNavbar.init();
+
+  function logout(){
+    firebase.auth().signOut().then(() => {
+        window.location.href ='../../index.html';
+    }).catch(() => {
+        alert('Erro ao sair');
+    })
+}
